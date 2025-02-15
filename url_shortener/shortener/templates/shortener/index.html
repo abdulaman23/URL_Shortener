@@ -1,0 +1,36 @@
+{% csrf_token %}
+<!DOCTYPE html>
+<html lang="en"></html>
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title> 
+    {% load static %}  <!-- Load static files -->
+    <link rel="stylesheet" href = "{% static 'css/styles.css' %}">
+    <script defer src = "{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>URL Shortener</h2>
+
+        <label for="long-url">Enter Long URL:</label>
+        <input type="text" id="long-url" placeholder="https://example.com">
+        <button onclick="shortenURL()">Shorten</button>
+        <p id="short-url"></p>
+
+        <hr>
+
+        <h2>Retrieve Original URL</h2>
+        <label for="short-url-input">Enter Short URL:</label>
+        <input type="text" id="short-url-input" placeholder="short_code">
+        <button onclick="getOriginalURL()">Get Original URL</button>
+        <p id="original-url"></p>
+    </div>
+</body>
+</html>
+
+</head>
+</html>
